@@ -3,7 +3,7 @@ import {Loader2} from "lucide-react"
 
 type FormButtonProps = {
     children: React.ReactNode,
-    isLoading: boolean
+    isLoading?: boolean
 }
 
 

@@ -10,7 +10,7 @@ const TopicList = async() => {
         return (
             <div key={topic.id}>
                 <Link href={paths.topicShowPath(topic.slug)}>
-                    <Badge variant={"secondary"} className="bg-orange-500 hover:bg-orange-400 p-2">
+                    <Badge variant={"secondary"} className="bg-orange-500 hover:bg-orange p-2">
                         {topic.slug}
                     </Badge>
                 </Link>

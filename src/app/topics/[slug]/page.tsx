@@ -1,4 +1,6 @@
 import PostCreateForm from "@/components/posts/PostCreateForm";
+import PostList from "@/components/posts/PostList";
+import { fetchPostsByTopicSlug } from "@/db/queries/posts";
 
 interface TopicShowPageProps {
   params: Promise<{
@@ -14,7 +16,7 @@ const SingleTopicPage = async({params}:TopicShowPageProps) => {
     <div className="grid grid-cols-4 gap-4 p-4">
       <div className="col-span-3">
         <h1 className="text-2xl font-bold mb-2">
-          {slug}
+          <PostList fetchData={() => fetchPostsByTopicSlug(slug)} />
         </h1>
       </div>
       <div>
