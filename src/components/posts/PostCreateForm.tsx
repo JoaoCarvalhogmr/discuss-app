@@ -17,7 +17,7 @@ interface PostCreateFormProps {
 
 const PostCreateForm = ({slug} : PostCreateFormProps) => {
     const [formState, action, isPending] = useActionState(actions.createPost.bind(null, slug), {errors: {}});
-
+    
 
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
