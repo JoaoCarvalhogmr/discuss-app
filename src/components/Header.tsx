@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { Input } from "./ui/input";
+import SearchInput from "./SearchInput";
 import HeaderAuth from "./HeaderAuth";
+import { Suspense } from "react";
 
 
 const Header = async() => {
@@ -14,7 +15,9 @@ const Header = async() => {
           </Link> 
         </div>
         <div > 
-          <Input />
+          <Suspense>
+            <SearchInput />
+          </Suspense>
         </div>
         <div >
           <HeaderAuth />
