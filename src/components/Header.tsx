@@ -8,7 +8,7 @@ const Header = async() => {
 
   return (
     <header className="shadow mb-6 w-full py-3">
-      <nav className="flex w-full justify-around items-center">
+      <nav className="flex w-full justify-between items-center px-4">
         <div>
           <Link href={"/"} className="font-bold">
             Discuss

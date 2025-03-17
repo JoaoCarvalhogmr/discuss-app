@@ -16,7 +16,7 @@ export default async function PostList({fetchData}: PostListProps) {
     if (!topicSlug) {
       throw new Error('Need a slug to link to a post');
     }
-
+ 
     return (
       <div key={post.id} className="border rounded p-2">
         <Link href={paths.postShowPath(topicSlug, post.id)}>
@@ -31,6 +31,8 @@ export default async function PostList({fetchData}: PostListProps) {
       </div>
     );
   });
+
+
 
   return <div className="space-y-2">{renderedPosts}</div>;
 }
